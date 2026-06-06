@@ -1,17 +1,24 @@
 {
-  "name": "@humanity/empire-memory-mcp",
+  "name": "empire-memory-mcp",
   "version": "0.1.0",
-  "private": true,
-  "description": "MCP server exposing the Humanity Group empire memories (~/.claude memories + ~/Documents/wiki-internal) to Claude Code and other MCP clients.",
+  "description": "An MCP server that exposes a flat directory of Markdown memory files to Claude Code (and any MCP client) via 5 read-only tools: list, get, search, list-wiki, get-wiki. Originally built for the Humanity Group empire memory store but agnostic to any Markdown-based knowledge base.",
   "type": "module",
+  "main": "./dist/index.js",
   "bin": {
     "empire-memory-mcp": "./dist/index.js"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "start": "node dist/index.js",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm typecheck && pnpm build"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
@@ -21,5 +28,35 @@
   "devDependencies": {
     "@types/node": "^22.0.0",
     "typescript": "^5.6.0"
-  }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "claude-code",
+    "anthropic",
+    "memory",
+    "knowledge-base",
+    "ai-agents",
+    "markdown",
+    "rag",
+    "agent-tooling"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Lauren Conforti",
+    "email": "humanitygroup.admin@gmail.com",
+    "url": "https://humanity-group.vercel.app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/humanityrecord/empire-memory-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/humanityrecord/empire-memory-mcp/issues"
+  },
+  "homepage": "https://github.com/humanityrecord/empire-memory-mcp#readme"
 }
