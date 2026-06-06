@@ -85,6 +85,8 @@ This is the first piece of public infrastructure from a larger private stack I'v
 Source: [github.com/humanityrecord/empire-memory-mcp](https://github.com/humanityrecord/empire-memory-mcp)
 Issues/PRs welcome — especially around the env var override path and the v0.3 semantic search design.
 
+**Drop a star if this saves you a vector DB ⭐**
+
 ---
 
-*Lauren Conforti is the founder of Humanity Group. She runs 8 brands, swims weekly, and writes [here](#) when an open-source release is worth a story.*
+*Lauren Conforti is the founder of Humanity Group, an empire of 8 brands spanning music, vocal coaching, books, films, and a personal journal. She trains in sport at a high level, builds software, and writes when an open-source release is worth a story. Find her at [humanity-group.com](https://humanity-group.com) or on GitHub as [@humanityrecord](https://github.com/humanityrecord).*
