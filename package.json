@@ -1,0 +1,25 @@
+{
+  "name": "@humanity/empire-memory-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MCP server exposing the Humanity Group empire memories (~/.claude memories + ~/Documents/wiki-internal) to Claude Code and other MCP clients.",
+  "type": "module",
+  "bin": {
+    "empire-memory-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "gray-matter": "^4.0.3",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
